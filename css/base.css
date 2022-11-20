@@ -342,6 +342,7 @@ footer div a img {
     footer {
         padding: 0.5rem;
         border-top: 2px solid rgb(104, 90, 11);
+        user-select: none;
     }
 
     footer div a {
