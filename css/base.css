@@ -1,0 +1,280 @@
+/* BASE STYLES */
+@font-face {
+    font-family: "Roman";
+    src: url("./fonts/Roman\ SD.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(69, 6, 6);
+    font-family: "Roman";
+}
+
+/* NAVIGATION */
+@font-face {
+    font-family: "Dacian Domarium";
+    src: url("./fonts/DacianDonarium.ttf");
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: radial-gradient(rgb(77, 7, 7), rgb(22, 2, 2));
+    border-bottom: 3px solid rgb(104, 90, 11);
+    user-select: none;
+}
+
+#navLogo {
+    margin: 1.25rem;
+}
+
+#navLogo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+#navLogo img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+}
+
+#navLogo p {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Dacian Domarium";
+    color: rgb(210, 204, 174);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    margin: 0.75rem;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(104, 90, 11);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    animation: navLinkHover 1.2s ease-in-out infinite alternate;
+    border-bottom: 2px solid rgb(104, 90, 11);
+}
+
+.navBigScreen {
+    display: inline-block;
+}
+
+.navSmallScreen {
+    display: none;
+    color: rgb(104, 90, 11);
+    font-weight: bolder;
+}
+
+@keyframes navLinkHover {
+    from {
+        color: rgb(104, 90, 11);
+    }
+    to {
+        color: rgb(210, 204, 174);
+        border-bottom: 2px solid rgb(210, 204, 174);
+    }
+}
+
+
+@media only screen and (max-width: 1300px) {
+    nav {
+        border-bottom: 2.5px solid rgb(104, 90, 11);
+    }
+
+    #navLogo {
+        margin: 0.85rem
+    }
+
+    #navLogo img {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 0.3rem;
+    }
+
+    #navLogo p {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        margin: 0.6rem;
+    }
+
+    nav ul li a {
+        font-size: 0.95rem;
+        padding: 0.375rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        border-bottom: 2px solid rgb(104, 90, 11);
+    }
+
+    #navLogo {
+        margin: 0.55rem
+    }
+
+    #navLogo img {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 0.19rem;
+    }
+
+    #navLogo p {
+        font-size: 1.15rem;
+    }
+
+    nav ul li {
+        margin: 0.4rem;
+    }
+
+    nav ul li a {
+        font-size: 0.725rem;
+        padding: 0.295rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        border-bottom: 1.5px solid rgb(104, 90, 11);
+    }
+
+    #navLogo {
+        margin: 0.375rem
+    }
+
+    #navLogo img {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.12rem;
+    }
+
+    #navLogo p {
+        font-size: 0.75rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem;
+    }
+
+    .navBigScreen {
+        display: none;
+    }
+    
+    .navSmallScreen {
+        display: inline-block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    nav {
+        border-bottom: 1px solid rgb(104, 90, 11);
+    }
+
+    #navLogo {
+        margin: 0.3rem;
+    }
+
+    #navLogo img {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.2rem;
+    }
+
+    #navLogo p {
+        font-size: 0.5rem;
+    }
+
+    nav ul li {
+        margin: 0.4rem;
+    }
+
+    .navSmallScreen {
+        font-size: 1.75rem;
+    }
+}
+
+
+/* HAMBURGER MENU */
+.toggleMenu {
+    display: none;
+}
+
+.toggleWhite {
+    color: rgb(210, 204, 174);
+}
+
+#hamburgerMenu {
+    position: absolute;
+    right: 0;
+    padding: 0;
+    background-color: rgba(210, 204, 174, 0.8);
+    border: 3px solid rgb(104, 90, 11);
+    border-top: none;
+}
+
+#hamburgerMenu ul {
+    list-style: none;
+}
+
+
+#hamburgerMenu ul li {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#hamburgerMenu ul li:nth-child(2) {
+    border-top: 2px solid rgb(104, 90, 11);
+    border-bottom: 2px solid rgb(104, 90, 11);
+}
+
+
+#hamburgerMenu ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+@media only screen and (max-width: 400px) {
+    #hamburgerMenu ul li {
+        padding: 0.3rem;
+    }
+
+    #hamburgerMenu ul li a {
+        font-size: 0.7rem;
+        padding: 0.3rem;
+    }
+
+    #hamburgerButton {
+        margin: 0 0.3rem;
+    }
+}
