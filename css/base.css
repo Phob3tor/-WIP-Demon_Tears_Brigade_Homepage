@@ -1,3 +1,110 @@
+/* BLUR */
+#blurDiv {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    filter: blur(1rem);
+    background-color: rgba(43, 42, 42, 0.8);
+}
+
+/* DISCLAIMER */
+#disclaimer {
+    position: fixed;
+    
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    font-family: monospace;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 2;
+    width: 80vw;
+}
+
+#disclaimer div {
+    border: 3px solid white;
+    width: 100%;
+}
+
+#discExitBar {
+    background-color: white;
+    display: flex;
+    justify-content: right;
+}
+
+#discExitBar button {
+    border: none;
+    margin: 0.2rem;
+    transform: scale(1.25, 1);
+}
+
+#disclaimerText {
+    padding: 3rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5vw;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#disclaimerText h2{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#disclaimerText p {
+    margin-bottom: 0.5rem;
+}
+
+#disclaimerText span {
+    color: red;
+    font-weight: bolder;
+}
+
+.showDisc {
+    display: flex;
+}
+
+.hideDisc {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    #disclaimer {
+        width: 100%;
+        height: 100vh;
+        padding: 0.25rem;
+    }
+
+    #disclaimerText {
+        height: 100%;
+        padding: 1.5rem;
+        text-align: center;
+        font-size: 5vw;
+    }
+
+    #disclaimerText p {
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #disclaimerText {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #disclaimerText {
+        padding: 0.5rem;
+    }
+}
+
+
 /* BASE STYLES */
 @font-face {
     font-family: "Roman";
@@ -12,6 +119,7 @@
 
 body {
     font-family: "Roman";
+    z-index: 0;
 }
 
 /* NAVIGATION */
@@ -398,3 +506,4 @@ footer div a img {
         height: 0.9rem;
     }
 }
+
